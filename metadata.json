@@ -1,0 +1,6 @@
+{
+  "name": "The Masterclass Book",
+  "description": "Minimalist landing page with zero-fee Venmo/Zelle payment flow and sales dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
