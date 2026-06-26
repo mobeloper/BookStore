@@ -23,7 +23,7 @@ export default function DownloadFreeChapter() {
           
           {/* Note: Ensure you upload your PDF to the public/ folder as "free-chapter.pdf" */}
           <a 
-            href="/free-chapter.pdf" 
+            href="/TiffaniSainz_Beyond_Trauma_Free_Chapter.pdf" 
             download="Beyond_Trauma_Free_Chapter.pdf"
             className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors w-full sm:w-auto"
           >

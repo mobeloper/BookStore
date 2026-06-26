@@ -148,9 +148,9 @@ function HeroVersionA({ timerVersion }: { timerVersion: 'a' | 'b' }) {
               Buy Book — $95
               <ArrowRight size={18} />
             </Link>
-            <a href="#free-chapter" className="inline-flex items-center justify-center gap-2 bg-transparent text-stone-900 border border-stone-200 px-8 py-3.5 rounded-full font-medium hover:bg-stone-50 transition-colors">
+            <Link to="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-transparent text-stone-900 border border-stone-200 px-8 py-3.5 rounded-full font-medium hover:bg-stone-50 transition-colors">
               Get 1 Chapter Free
-            </a>
+            </Link>
           </div>
           <CountdownTimer variant={timerVersion} />
           <div className="flex items-center gap-4 text-sm text-stone-500">
@@ -240,9 +240,9 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
               <Link to="/purchase-book" className="inline-flex items-center justify-center gap-2 bg-white md:bg-stone-900 text-stone-900 md:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-stone-100 md:hover:bg-stone-800 transition-colors shadow-2xl">
                 Buy Book — $95
               </Link>
-              <a href="#free-chapter" className="inline-flex items-center justify-center gap-2 bg-black/30 md:bg-transparent text-white md:text-stone-900 border border-white/40 md:border-stone-200 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-black/50 md:hover:bg-stone-50 transition-colors backdrop-blur-md md:backdrop-blur-none">
+              <Link to="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-black/30 md:bg-transparent text-white md:text-stone-900 border border-white/40 md:border-stone-200 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-black/50 md:hover:bg-stone-50 transition-colors backdrop-blur-md md:backdrop-blur-none">
                 Get 1 Chapter Free
-              </a>
+              </Link>
             </div>
             
             <CountdownTimer theme="heroB" variant={timerVersion} />
@@ -761,10 +761,10 @@ export default function Landing() {
           <h2 className="text-3xl font-serif font-bold italic text-stone-900 mb-8">Dialectical Behavior Therapy (DBT) - Distress Tolerance Skills.</h2>
           
           <div className="mb-12">
-            <a href="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors shadow-lg">
+            <Link to="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors shadow-lg">
               Get Free Chapter
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
 
           <div className="pt-8 border-t border-stone-100 hidden">

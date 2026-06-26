@@ -36,7 +36,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-neutral-50 selection:bg-stone-200">
       <header className="absolute md:fixed top-0 w-full z-50 md:bg-neutral-50/90 md:backdrop-blur-md md:border-b md:border-stone-200/50 transition-colors">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-24 md:h-[60px] flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group relative z-10">
             <div className="bg-stone-900 text-white p-1.5 rounded-sm shadow-md">
               <BookOpen size={18} />
