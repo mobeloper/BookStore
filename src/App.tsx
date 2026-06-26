@@ -4,7 +4,7 @@
  */
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { BookOpen, LineChart, PenTool } from 'lucide-react';
+import { BookOpen, Instagram, Linkedin, Globe, LineChart, PenTool } from 'lucide-react';
 import Landing from './pages/Landing';
 import Blog from './pages/Blog';
 import Dashboard from './pages/Dashboard';
@@ -49,30 +49,98 @@ function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex items-center gap-2 text-stone-900 mb-4">
                 <BookOpen size={20} />
                 <span className="font-serif italic text-lg font-bold">Limitless</span>
-                <p className="text-stone-500 text-sm font-serif">Tiffani Sainz, MA, AMFT.</p>
-              </div>              
+                <p className="text-stone-500 text-sm font-serif">
+                  Tiffani Sainz, MA, AMFT.
+                </p>
+              </div>
+
               <p className="text-stone-500 text-sm max-w-sm mb-6 leading-relaxed">
-                A Framework for Emotional Recovery and Personal Transformation to help you regulate your nervous system & maximize the present moment experience.
+                A Framework for Emotional Recovery and Personal Transformation to help
+                you regulate your nervous system & maximize the present moment
+                experience.
               </p>
-              {/* 
-              <a href="https://tiffanisainz.com/contact#book-consult" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-stone-900 text-white hover:bg-stone-800 px-5 py-2.5 rounded-full font-medium transition-colors text-sm shadow-sm">
-                Book a free 15 min consultation
-              </a>
-              */}
-              <a href="/#payment-section" className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg">
+
+              <a
+                href="/#payment-section"
+                className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg"
+              >
                 Buy Book — $95
               </a>
             </div>
 
             {/* Navigation Links */}
             <div className="flex flex-col items-center md:items-start">
-              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">Explore</h4>
+              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
+                Explore
+              </h4>
+
               <nav className="flex flex-col gap-3 text-sm text-stone-500">
-                <Link to="/" className="hover:text-stone-900 transition-colors">Home</Link>
-                <Link to="/about-me" className="hover:text-stone-900 transition-colors">About the Author</Link>
-                <Link to="/free-chapter-form" className="hover:text-stone-900 transition-colors">Free Chapter</Link>
-                <Link to="https://tiffanisainz.com/contact#book-consult" className="hover:text-stone-900 transition-colors">Book a Consultation</Link>
+                <Link to="/" className="hover:text-stone-900 transition-colors">
+                  Home
+                </Link>
+
+                <Link
+                  to="/about-me"
+                  className="hover:text-stone-900 transition-colors"
+                >
+                  About the Author
+                </Link>
+
+                <Link
+                  to="/free-chapter-form"
+                  className="hover:text-stone-900 transition-colors"
+                >
+                  Free Chapter
+                </Link>
+
+                <a
+                  href="https://tiffanisainz.com/contact#book-consult"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-stone-900 transition-colors"
+                >
+                  Book a Consultation
+                </a>
               </nav>
+            </div>
+
+            {/* Connect */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
+                Connect
+              </h4>
+
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.instagram.com/mindlinkconsulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-stone-500 hover:text-stone-900 transition-colors"
+                >
+                  <Instagram size={22} />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/tiffanivanae/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-stone-500 hover:text-stone-900 transition-colors"
+                >
+                  <Linkedin size={22} />
+                </a>
+
+                <a
+                  href="https://tiffanisainz.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Practice Website"
+                  className="text-stone-500 hover:text-stone-900 transition-colors"
+                >
+                  <Globe size={22} />
+                </a>
+              </div>
             </div>
 
             {/* Legal & Support */}
