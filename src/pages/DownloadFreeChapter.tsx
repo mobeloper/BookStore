@@ -17,7 +17,7 @@ export default function DownloadFreeChapter() {
         </p>
         
         <div className="bg-stone-50 p-6 rounded-2xl mb-8 border border-stone-100">
-          <h3 className="font-bold text-stone-900 mb-2 font-serif text-xl">Chapter 1: Distress Tolerance Skills</h3>
+          <h3 className="font-bold text-stone-900 mb-2 font-serif text-xl">DBT Distress Tolerance Skills</h3>
           <p className="text-sm text-stone-500 mb-6">PDF Document • 2.4 MB</p>
           
           {/* Note: Ensure you upload your PDF to the public/ folder as "free-chapter.pdf" */}

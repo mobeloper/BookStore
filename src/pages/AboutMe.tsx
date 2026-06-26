@@ -65,7 +65,7 @@ export default function AboutMe() {
               </h1>
               
               {/* <div className="space-y-6 text-stone-600 text-lg leading-relaxed"> */}
-              <div className="space-y-6 text-stone-500 font-medium italic leading-relaxed">
+              <div className="space-y-6 text-stone-500 font-medium leading-relaxed">
               
                 <p>
                   My path to this workbook was anything but traditional — and I believe that is exactly what makes it different.

@@ -41,13 +41,52 @@ function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-1 w-full">
         {children}
       </main>
-      <footer className="bg-white border-t border-neutral-200 py-8 md:py-12 mt-auto">
-        <div className="max-w-5xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <div className="flex items-center gap-2">
-            <BookOpen size={16} />
-            <span className="font-serif italic text-base">The Masterclass Ebook</span>
+      <footer className="bg-stone-50 border-t border-neutral-200 py-12 md:py-16 mt-auto">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left">
+            {/* Brand & Description */}
+            <div className="md:col-span-2 flex flex-col items-center md:items-start">
+              <div className="flex items-center gap-2 text-stone-900 mb-4">
+                <BookOpen size={20} />
+                <span className="font-serif italic text-lg font-bold">Limitless</span>
+                <p className="text-stone-500 text-sm font-serif">Tiffani Sainz, MA, AMFT.</p>
+              </div>              
+              <p className="text-stone-500 text-sm max-w-sm mb-6 leading-relaxed">
+                A Framework for Emotional Recovery and Personal Transformation to help you regulate your nervous system & maximize the present moment experience.
+              </p>
+              <a href="https://tiffanisainz.com/contact#book-consult" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-stone-900 text-white hover:bg-stone-800 px-5 py-2.5 rounded-full font-medium transition-colors text-sm shadow-sm">
+                Book a free 15 min consultation
+              </a>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">Explore</h4>
+              <nav className="flex flex-col gap-3 text-sm text-stone-500">
+                <Link to="/" className="hover:text-stone-900 transition-colors">Home</Link>
+                <Link to="/about-me" className="hover:text-stone-900 transition-colors">About the Author</Link>
+                <Link to="/free-chapter-form" className="hover:text-stone-900 transition-colors">Free Chapter</Link>
+              </nav>
+            </div>
+
+            {/* Legal & Support */}
+            {/* 
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">Legal</h4>
+              <nav className="flex flex-col gap-3 text-sm text-stone-500">
+                <a href="#" className="hover:text-stone-900 transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-stone-900 transition-colors">Terms of Service</a>
+                <a href="https://tiffanisainz.com/contact" target="_blank" rel="noopener noreferrer" className="hover:text-stone-900 transition-colors">Contact Support</a>
+              </nav>
+            </div>
+            */}
           </div>
-          <p>&copy; {new Date().getFullYear()} Tiffani Sainz, MA, AMFT. All rights reserved.</p>
+
+          {/* Bottom Bar: Copyright & Credits */}
+          <div className="pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-400">
+            <p>Copyright &copy; {new Date().getFullYear()} All rights reserved.</p>
+            <p>Website by Eric Michel</p>
+          </div>
         </div>
       </footer>
     </div>

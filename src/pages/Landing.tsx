@@ -705,7 +705,7 @@ export default function Landing() {
             </a>
           </div>
 
-          <div className="pt-8 border-t border-stone-100">
+          <div className="pt-8 border-t border-stone-100 hidden">
             <p className="text-sm font-medium text-stone-500 mb-4 uppercase tracking-wider">Or join the newsletter</p>
             {subscribed ? (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-green-50 text-green-800 p-3 rounded-xl inline-flex items-center gap-2 text-sm">
