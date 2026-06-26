@@ -70,9 +70,6 @@ function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Navigation Links */}
             <div className="flex flex-col items-center md:items-start">
-              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
-                Explore
-              </h4>
 
               <nav className="flex flex-col gap-3 text-sm text-stone-500">
                 <Link to="/" className="hover:text-stone-900 transition-colors">
@@ -106,9 +103,6 @@ function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Connect */}
             <div className="flex flex-col items-center md:items-start">
-              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
-                Connect
-              </h4>
 
               <div className="flex items-center gap-4">
                 <a
@@ -146,7 +140,6 @@ function Layout({ children }: { children: React.ReactNode }) {
             {/* Legal & Support */}
             {/* 
             <div className="flex flex-col items-center md:items-start">
-              <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">Legal</h4>
               <nav className="flex flex-col gap-3 text-sm text-stone-500">
                 <a href="#" className="hover:text-stone-900 transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-stone-900 transition-colors">Terms of Service</a>

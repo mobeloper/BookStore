@@ -48,6 +48,11 @@ const NEW_TESTIMONIALS = [
     name: "Harlow A.", 
     role: "Previous Client\nAttorney\nLos Angeles, CA", 
     quote: "Working with Tiffani has been a magnetic, almost a spiritual experience; she has lifted me up on a soul level. She brings every credential and clinical skill you could ask for, but the way she delivers therapy, the way she makes you feel it, is something beyond technique. It is genuinely life-saving.\n\nWhen I met Tiffani, I was in the deepest depression of my life. I didn't want a therapist. I wasn't leaving my house. I took a leave of absence from college. I was admitted to a psychiatric facility and she came to visit me! She never gave up on me. Most people walk away when things get hard. She doesn't! And watching her show up taught me that I was worth showing up for.\n\nI have been working with Tiffani for four years. One of the most important things she has helped me understand is that therapy is a launchpad.  We now meet twice a month because I have learned to trust my own thinking.  During my crisis moments, I saw her three or sometimes four times a week.  I've grown a lot.  Her steadiness and the feeling of safety I have with her really saved me.  I am truly lucky our paths crossed." 
+  },
+  {
+    name: "Jaime Wyatt",
+    role: "Previous Client\nCountry Music Artist\n<a href='https://www.instagram.com/jaimewyatt' target='_blank' rel='noopener noreferrer' class='hover:text-stone-200 transition-colors'>@jaimewyatt</a>",
+    quote: "Tiffani Sainz is a conduit for empowerment, personal growth and insight. Her ability to provide emotional attunement and validation go beyond the realms of traditional therapists and practitioners. She is a healer who has helped me by truly seeing me and supporting me while I face my trauma. I cannot recommend her enough for those who are ready to learn how to love themselves and grow beyond their wildest dreams."
   }
 ];
 
@@ -189,7 +194,7 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
   const showBookCover = false;
 
   return (
-    <section className="relative w-full h-[100dvh] flex overflow-hidden bg-neutral-50">
+    <section className="relative w-full h-[100dvh] min-h-[750px] md:min-h-[800px] flex overflow-hidden bg-neutral-50 py-12 md:py-0">
       {/* Mobile Background Image (Visible only on mobile) */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img src="/authorBook.png" alt="Tiffani Sainz" className="w-full h-full object-cover object-top" />
@@ -207,21 +212,21 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row h-full pt-20 md:pt-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row flex-1 pt-20 md:pt-24 lg:pt-20">
         
         {/* LEFT SIDE (55% on desktop, 100% on mobile) */}
-        <div className="w-full md:w-[55%] h-full flex flex-col justify-start md:justify-center px-4 md:px-6 pb-6 md:pb-0 pt-0 md:pt-0">
+        <div className="w-full md:w-[55%] flex-1 flex flex-col justify-start md:justify-center px-4 md:px-6 pb-6 md:pb-0 pt-0 md:pt-0">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 sm:space-y-6 md:space-y-8 max-w-xl text-white md:text-stone-900 mt-0"
+            className="space-y-4 sm:space-y-5 md:space-y-6 max-w-xl text-white md:text-stone-900 mt-0"
           >
             <div className="inline-flex items-center gap-2 text-white/90 md:text-stone-500 text-xs sm:text-sm font-bold uppercase tracking-widest drop-shadow-md md:drop-shadow-none">
               WORKBOOK - Vol. 1
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold leading-[1.1] drop-shadow-lg md:drop-shadow-none">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-[1.1] drop-shadow-lg md:drop-shadow-none">
               Beyond Trauma: <br className="hidden lg:block" />
               Building Capacity for Presence and Choice
             </h1>
@@ -261,7 +266,7 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
         </div>
 
         {/* RIGHT SIDE FOREGROUND (45% on desktop) */}
-        <div className="hidden md:block w-[45%] h-full relative z-10 pointer-events-none">
+        <div className="hidden md:flex flex-1 w-[45%] flex-col justify-end items-start pb-20 lg:pb-24 pl-0 lg:pl-12 relative z-10 pointer-events-none">
           
           {/* Layer 2: Floating Book */}
           {showBookCover && (
@@ -280,7 +285,7 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute bottom-40 left-0 lg:left-12 bg-white/95 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[280px] pointer-events-auto"
+            className="bg-white/95 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/50 max-w-[280px] pointer-events-auto mt-auto relative z-20"
           >
             <h3 className="font-serif font-bold text-lg text-stone-900 mb-1">Tiffani Sainz, MA, AMFT</h3>
             <p className="text-stone-600 font-semibold text-xs mb-3 uppercase tracking-wider">Trauma Therapist · Speaker</p>
@@ -289,7 +294,6 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
               10+ Years Helping Individuals Build Capacity and Choice
             </p>
           </motion.div>
-
         </div>
         
       </div>
@@ -301,8 +305,16 @@ export default function Landing() {
   const [openChapter, setOpenChapter] = useState<number | null>(0);
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
-  const [heroVersion, setHeroVersion] = useState<'A' | 'B'>('A');
+  const [heroVersion, setHeroVersion] = useState<'A' | 'B'>('B');
   const [timerVersion, setTimerVersion] = useState<'a' | 'b'>('b');
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % NEW_TESTIMONIALS.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -316,7 +328,8 @@ export default function Landing() {
     <div className="w-full relative">
       {/* Dev Toggle for A/B Testing */}
       <div className="fixed bottom-24 right-6 md:bottom-6 md:right-6 z-50 flex flex-col gap-2">
-        <div className="bg-white border border-stone-200 p-2 rounded-xl shadow-xl flex items-center gap-2">
+        {/* Timer Version Selector Hidden */}
+        <div className="hidden bg-white border border-stone-200 p-2 rounded-xl shadow-xl items-center gap-2">
           <span className="text-xs font-medium text-stone-500 pl-2">Timer V:</span>
           <div className="flex bg-stone-100 rounded-lg p-1">
             <button 
@@ -333,7 +346,7 @@ export default function Landing() {
             </button>
           </div>
         </div>
-        <div className="bg-white border border-stone-200 p-2 rounded-xl shadow-xl flex items-center gap-2">
+        <div className="hidden bg-white border border-stone-200 p-2 rounded-xl shadow-xl items-center gap-2">
           <span className="text-xs font-medium text-stone-500 pl-2">Hero V:</span>
           <div className="flex bg-stone-100 rounded-lg p-1">
             <button 
@@ -366,15 +379,15 @@ export default function Landing() {
           <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
           
-          <div className="flex animate-marquee whitespace-nowrap min-w-[200%] w-max">
+          <div className="flex animate-marquee whitespace-nowrap w-max">
             {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center justify-around w-1/2 px-4">
-                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300 mx-8">USC</span>
-                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300 mx-8">UCLA</span>
-                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300 mx-8">Pepperdine</span>
-                <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold tracking-tighter text-stone-300 mx-8">JPL</span>
-                <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-black tracking-tight text-stone-300 mx-8">NASA</span>
-                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300 mx-8">City of Hope</span>
+              <div key={i} className="flex items-center gap-16 pr-16 flex-nowrap">
+                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">USC</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">UCLA</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">Pepperdine</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold tracking-tighter text-stone-300">JPL</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-black tracking-tight text-stone-300">NASA</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">City of Hope</span>
               </div>
             ))}
           </div>
@@ -588,29 +601,75 @@ export default function Landing() {
       <section id="testimonials" className="py-20 md:py-32 bg-stone-900 text-stone-100 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-center text-3xl md:text-5xl font-serif font-bold text-white mb-16">Endorsement and Testimonials</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {NEW_TESTIMONIALS.map((t, idx) => (
-              <div key={idx} className={`bg-stone-800 p-8 md:p-12 rounded-3xl flex flex-col justify-between ${t.featured ? 'md:col-span-2' : ''}`}>
-                <div className="mb-8">
-                  <svg className="w-8 h-8 text-stone-600 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                  <p className={`font-serif italic leading-relaxed whitespace-pre-line text-stone-300 ${t.featured ? 'text-lg md:text-xl' : 'text-lg'}`}>"{t.quote}"</p>
-                  
-                  {!t.featured && (
-                    <div className="flex mt-6">
-                      {[1, 2, 3, 4, 5].map(i => (
-                        <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div className="pt-6 border-t border-stone-700/50">
-                  <p className="font-bold text-white mb-1">{t.name}</p>
-                  <p className="text-stone-400 text-sm whitespace-pre-line leading-relaxed">{t.role}</p>
-                </div>
+          <div className="relative w-full max-w-4xl mx-auto">
+            <div className="overflow-hidden rounded-3xl bg-stone-800">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTestimonial}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="p-8 md:p-12 flex flex-col justify-between w-full"
+                >
+                  <div className="mb-8">
+                    <svg className="w-8 h-8 text-stone-600 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                    <p className={`font-serif italic leading-relaxed whitespace-pre-line text-stone-300 ${NEW_TESTIMONIALS[activeTestimonial].featured ? 'text-lg md:text-xl' : 'text-lg'}`}>"{NEW_TESTIMONIALS[activeTestimonial].quote}"</p>
+                    
+                    {!NEW_TESTIMONIALS[activeTestimonial].featured && (
+                      <div className="flex mt-6">
+                        {[1, 2, 3, 4, 5].map(i => (
+                          <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className="pt-6 border-t border-stone-700/50">
+                    <p className="font-bold text-white mb-1">{NEW_TESTIMONIALS[activeTestimonial].name}</p>
+                    <p 
+                      className="text-stone-400 text-sm whitespace-pre-line leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: NEW_TESTIMONIALS[activeTestimonial].role }}
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Navigation and Dots */}
+            <div className="flex items-center justify-between mt-8">
+              <button 
+                onClick={() => setActiveTestimonial((prev) => (prev - 1 + NEW_TESTIMONIALS.length) % NEW_TESTIMONIALS.length)}
+                className="w-10 h-10 rounded-full border border-stone-700 text-stone-400 flex items-center justify-center hover:bg-stone-800 hover:text-white transition-colors"
+                aria-label="Previous testimonial"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <div className="flex justify-center gap-3">
+                {NEW_TESTIMONIALS.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveTestimonial(idx)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTestimonial === idx ? 'bg-stone-100 scale-125' : 'bg-stone-600 hover:bg-stone-500'}`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
               </div>
-            ))}
+
+              <button 
+                onClick={() => setActiveTestimonial((prev) => (prev + 1) % NEW_TESTIMONIALS.length)}
+                className="w-10 h-10 rounded-full border border-stone-700 text-stone-400 flex items-center justify-center hover:bg-stone-800 hover:text-white transition-colors"
+                aria-label="Next testimonial"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
