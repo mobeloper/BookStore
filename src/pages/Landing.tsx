@@ -601,7 +601,7 @@ export default function Landing() {
       {/* New Testimonials Section */}
       <section id="testimonials" className="py-20 md:py-32 bg-stone-900 text-stone-100 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-3xl md:text-5xl font-serif font-bold text-white mb-16">Endorsement and Testimonials</h2>
+          <h2 className="text-center text-3xl md:text-5xl font-serif font-bold text-white mb-16">Endorsement & Testimonials</h2>
           <div className="relative w-full max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-3xl bg-stone-800">
               <AnimatePresence mode="wait">

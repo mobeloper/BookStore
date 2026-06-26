@@ -81,7 +81,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-1 w-full">
         {children}
       </main>
-      <footer className="bg-stone-50 border-t border-neutral-200 py-12 md:py-16 mt-auto">
+      <footer className="bg-stone-50 border-t border-neutral-200 pt-12 pb-32 md:py-16 mt-auto">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left">
             {/* Brand & Description */}
