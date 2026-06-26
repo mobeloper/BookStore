@@ -5,6 +5,7 @@
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { BookOpen, LineChart, PenTool } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import Landing from './pages/Landing';
 import Blog from './pages/Blog';
 import Dashboard from './pages/Dashboard';
@@ -106,6 +107,7 @@ export default function App() {
           <Route path="/download-free-chapter" element={<DownloadFreeChapter />} />
         </Routes>
       </Layout>
+      <Analytics />
     </Router>
   );
 }
