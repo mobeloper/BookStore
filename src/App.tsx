@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import AboutMe from './pages/AboutMe';
 import FreeChapterForm from './pages/FreeChapterForm';
 import DownloadFreeChapter from './pages/DownloadFreeChapter';
+import PurchaseBook from './pages/PurchaseBook';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,9 +40,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <a href="/#chapters" className="text-stone-900 hover:text-stone-600 transition-colors drop-shadow-sm">Chapters</a>
             <a href="/#testimonials" className="text-stone-900 hover:text-stone-600 transition-colors drop-shadow-sm">Testimonials</a>
             {/* <a href="/#reviews" className="hidden text-stone-900 hover:text-stone-600 transition-colors drop-shadow-sm">Reviews</a> */}
-            <a href="/#payment-section" className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg">
+            <Link to="/purchase-book" className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg">
               Buy Book — $95
-            </a>
+            </Link>
           </nav>
           {/* Burger menu for mobile */}
           <button className="md:hidden text-stone-900 drop-shadow-md relative z-10 bg-white/50 p-2 rounded-full backdrop-blur-sm">
@@ -71,12 +72,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                 experience.
               </p>
 
-              <a
-                href="/#payment-section"
+              <Link
+                to="/purchase-book"
                 className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg"
               >
                 Buy Book — $95
-              </a>
+              </Link>
             </div>
 
             {/* Navigation Links */}
@@ -175,16 +176,21 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/free-chapter-form" element={<FreeChapterForm />} />
-          <Route path="/download-free-chapter" element={<DownloadFreeChapter />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/purchase-book" element={<PurchaseBook />} />
+        <Route path="/*" element={
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/about-me" element={<AboutMe />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/free-chapter-form" element={<FreeChapterForm />} />
+              <Route path="/download-free-chapter" element={<DownloadFreeChapter />} />
+            </Routes>
+          </Layout>
+        } />
+      </Routes>
     </Router>
   );
 }

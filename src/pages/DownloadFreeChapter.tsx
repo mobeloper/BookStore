@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function DownloadFreeChapter() {
   return (
@@ -33,9 +34,9 @@ export default function DownloadFreeChapter() {
 
         <div className="pt-8 border-t border-stone-100 mt-8">
           <p className="text-stone-500 text-sm mb-4">Ready to read the full book?</p>
-          <a href="/#payment-section" className="inline-flex items-center gap-2 text-stone-900 font-bold hover:text-stone-600 transition-colors">
+          <Link to="/purchase-book" className="inline-flex items-center gap-2 text-stone-900 font-bold hover:text-stone-600 transition-colors">
             Get the full book for $95 <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

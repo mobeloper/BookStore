@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, ArrowRight, CheckCircle2, ShieldCheck, Mail, Smartphone, UploadCloud, Brain, Activity, Users, Lightbulb, Leaf } from 'lucide-react';
 
@@ -143,10 +144,10 @@ function HeroVersionA({ timerVersion }: { timerVersion: 'a' | 'b' }) {
             Build the capacity to stay present, reclaim your power, and move beyond trauma.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#payment-section" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-3.5 rounded-full font-medium hover:bg-stone-800 transition-colors">
+            <Link to="/purchase-book" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-3.5 rounded-full font-medium hover:bg-stone-800 transition-colors">
               Buy Book — $95
               <ArrowRight size={18} />
-            </a>
+            </Link>
             <a href="#free-chapter" className="inline-flex items-center justify-center gap-2 bg-transparent text-stone-900 border border-stone-200 px-8 py-3.5 rounded-full font-medium hover:bg-stone-50 transition-colors">
               Get 1 Chapter Free
             </a>
@@ -236,9 +237,9 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 pt-2 md:pt-2">
-              <a href="#payment-section" className="inline-flex items-center justify-center gap-2 bg-white md:bg-stone-900 text-stone-900 md:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-stone-100 md:hover:bg-stone-800 transition-colors shadow-2xl">
+              <Link to="/purchase-book" className="inline-flex items-center justify-center gap-2 bg-white md:bg-stone-900 text-stone-900 md:text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-stone-100 md:hover:bg-stone-800 transition-colors shadow-2xl">
                 Buy Book — $95
-              </a>
+              </Link>
               <a href="#free-chapter" className="inline-flex items-center justify-center gap-2 bg-black/30 md:bg-transparent text-white md:text-stone-900 border border-white/40 md:border-stone-200 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold hover:bg-black/50 md:hover:bg-stone-50 transition-colors backdrop-blur-md md:backdrop-blur-none">
                 Get 1 Chapter Free
               </a>
@@ -794,9 +795,9 @@ export default function Landing() {
 
       {/* Mobile Sticky Buy Button */}
       <div className="md:hidden fixed bottom-6 left-6 right-6 z-40 pb-safe">
-        <a href="#payment-section" className="w-full bg-stone-900 text-white px-6 py-4 rounded-full font-medium shadow-2xl flex items-center justify-center gap-2">
+        <Link to="/purchase-book" className="w-full bg-stone-900 text-white px-6 py-4 rounded-full font-medium shadow-2xl flex items-center justify-center gap-2">
           Buy Book — $95
-        </a>
+        </Link>
       </div>
 
       {/* SEO & Indexing Block (Visually Hidden) */}
