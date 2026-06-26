@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { BookOpen, Instagram, Linkedin, Globe, LineChart, PenTool } from 'lucide-react';
 import Landing from './pages/Landing';
@@ -25,6 +25,14 @@ function ScrollToTop() {
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Close mobile menu when navigating
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900 bg-neutral-50 selection:bg-stone-200">
       <header className="absolute md:fixed top-0 w-full z-50 md:bg-neutral-50/90 md:backdrop-blur-md md:border-b md:border-stone-200/50 transition-colors">
@@ -45,11 +53,31 @@ function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </nav>
           {/* Burger menu for mobile */}
-          <button className="md:hidden text-stone-900 drop-shadow-md relative z-10 bg-white/50 p-2 rounded-full backdrop-blur-sm">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <button 
+            className="md:hidden text-stone-900 drop-shadow-md relative z-50 bg-white/50 p-2 rounded-full backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+            )}
           </button>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-neutral-50 md:hidden pt-24 px-6 flex flex-col items-center gap-8 text-center text-lg font-medium">
+          <Link to="/about-me" className="text-stone-900 hover:text-stone-600 transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>About The Author</Link>
+          <a href="/#chapters" className="text-stone-900 hover:text-stone-600 transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Chapters</a>
+          <a href="/#testimonials" className="text-stone-900 hover:text-stone-600 transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</a>
+          <Link to="/purchase-book" className="bg-stone-900 text-white px-8 py-3 rounded-full hover:bg-stone-800 transition-colors mt-4 shadow-lg w-full max-w-xs" onClick={() => setIsMobileMenuOpen(false)}>
+            Buy Book — $95
+          </Link>
+        </div>
+      )}
+
       <main className="flex-1 w-full">
         {children}
       </main>

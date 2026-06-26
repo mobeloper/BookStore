@@ -701,8 +701,8 @@ export default function Landing() {
         </section>
       </div>
 
-      {/* Payment / Zero Fee Process Section */}
-      <section id="payment-section" className="py-20 md:py-32 bg-stone-50 px-4 md:px-6">
+      {/* Payment / Zero Fee Process Section (Hidden for now) */}
+      <section id="payment-section" className="hidden py-20 md:py-32 bg-stone-50 px-4 md:px-6">
         <div className="max-w-4xl mx-auto bg-white border border-stone-200 p-8 md:p-12 rounded-[2rem] shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-stone-100 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50"></div>
           
