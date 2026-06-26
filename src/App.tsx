@@ -5,7 +5,6 @@
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { BookOpen, LineChart, PenTool } from 'lucide-react';
-import { Analytics } from '@vercel/analytics/react';
 import Landing from './pages/Landing';
 import Blog from './pages/Blog';
 import Dashboard from './pages/Dashboard';
@@ -55,8 +54,13 @@ function Layout({ children }: { children: React.ReactNode }) {
               <p className="text-stone-500 text-sm max-w-sm mb-6 leading-relaxed">
                 A Framework for Emotional Recovery and Personal Transformation to help you regulate your nervous system & maximize the present moment experience.
               </p>
+              {/* 
               <a href="https://tiffanisainz.com/contact#book-consult" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-stone-900 text-white hover:bg-stone-800 px-5 py-2.5 rounded-full font-medium transition-colors text-sm shadow-sm">
                 Book a free 15 min consultation
+              </a>
+              */}
+              <a href="/#payment-section" className="bg-stone-900 text-white px-6 py-2.5 rounded-full hover:bg-stone-800 transition-colors shadow-lg">
+                Buy Book — $95
               </a>
             </div>
 
@@ -67,6 +71,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/" className="hover:text-stone-900 transition-colors">Home</Link>
                 <Link to="/about-me" className="hover:text-stone-900 transition-colors">About the Author</Link>
                 <Link to="/free-chapter-form" className="hover:text-stone-900 transition-colors">Free Chapter</Link>
+                <Link to="https://tiffanisainz.com/contact#book-consult" className="hover:text-stone-900 transition-colors">Book a Consultation</Link>
               </nav>
             </div>
 
@@ -107,7 +112,6 @@ export default function App() {
           <Route path="/download-free-chapter" element={<DownloadFreeChapter />} />
         </Routes>
       </Layout>
-      <Analytics />
     </Router>
   );
 }

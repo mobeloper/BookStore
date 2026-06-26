@@ -675,12 +675,13 @@ export default function Landing() {
             </div>
           </div>
 
+
           <div className="flex justify-center">
             <a 
               href="https://forms.google.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-blue-600/20"
+              className="group inline-flex items-center gap-3 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors shadow-lg"
             >
               <CheckCircle2 className="w-5 h-5 text-blue-200" />
               <span>Step 2: Fill out the Google Form</span>
@@ -701,7 +702,7 @@ export default function Landing() {
           
           <div className="mb-12">
             <a href="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors shadow-lg">
-              Get This Chapter Free
+              Get Free Chapter
               <ArrowRight size={18} />
             </a>
           </div>
