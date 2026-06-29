@@ -388,6 +388,7 @@ export default function Landing() {
                 <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">Pepperdine</span>
                 <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold tracking-tighter text-stone-300">JPL</span>
                 <span className="text-2xl md:text-3xl lg:text-4xl font-sans font-black tracking-tight text-stone-300">NASA</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">Merrill Lynch</span>
                 <span className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-300">City of Hope</span>
               </div>
             ))}
