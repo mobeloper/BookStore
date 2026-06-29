@@ -372,7 +372,7 @@ export default function Landing() {
       <section className="py-12 md:py-16 bg-white border-y border-stone-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6 mb-8 text-center">
           <p className="text-xs md:text-sm font-bold text-stone-400 uppercase tracking-[0.2em]">
-            My clients work at 
+            Organizations I’ve Worked With 
           </p>
         </div>
         <div className="relative w-full flex overflow-hidden">
