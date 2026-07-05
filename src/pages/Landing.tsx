@@ -54,6 +54,16 @@ const NEW_TESTIMONIALS = [
     name: "Jaime Wyatt",
     role: "Previous Client\nCountry Music Artist\n<a href='https://www.instagram.com/jaimewyatt' target='_blank' rel='noopener noreferrer' class='hover:text-stone-200 transition-colors'>@jaimewyatt</a>",
     quote: "Tiffani Sainz is a conduit for empowerment, personal growth and insight. Her ability to provide emotional attunement and validation go beyond the realms of traditional therapists and practitioners. She is a healer who has helped me by truly seeing me and supporting me while I face my trauma. I cannot recommend her enough for those who are ready to learn how to love themselves and grow beyond their wildest dreams."
+  },
+  {
+    name: "Edith C.",
+    role: "Writer",
+    quote: "Tiffani's evolving blend of modalities, creativity and lived experience continues to change my life. Her therapy is one of the most valuable investments I've ever made in myself, and its positive effects ripple outward to impact my loved ones, communities and world. Her strength and tenderness, mixed with a strong practice of scientific curiosity, makes for a powerful guide through any of life's journeys."
+  },
+  {
+    name: "Artamisa B.",
+    role: "Medical Healthcare Director",
+    quote: "I met Tiffani during one of the lowest and most challenging periods of my life, following a traumatic event that left me feeling overwhelmed and uncertain. From the very beginning, I felt an instant connection. She created a safe, compassionate, and judgment-free space where I felt genuinely heard and supported.\n\nWith patience, empathy, and expertise in CBT, Tiffani helped me navigate trauma, addiction, major life transitions, and the daily challenges of living with Tourette's syndrome. She guided me toward a breakthrough that transformed the way I think, manage my emotions, and approach life's difficulties.\n\nTiffani continues to help me build clarity, resilience, and self-awareness. Thanks to her unwavering support, I am better equipped to handle overwhelming situations with confidence and a healthier mindset.\n\nI highly recommend Tiffani to anyone seeking a compassionate, insightful, and skilled therapist. Her impact on my life has been truly transformative, and I am deeply grateful for her role in my healing and growth."
   }
 ];
 
