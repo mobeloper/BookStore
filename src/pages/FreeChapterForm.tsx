@@ -18,7 +18,7 @@ export default function FreeChapterForm() {
         <h1 className="text-3xl md:text-4xl font-serif font-bold text-center text-stone-900 mb-8">
           Get Your Free Chapter
         </h1>
-        <h2 className="text-3xl md:text-4xl font-serif text-base font-bold text-center italic mb-8">Dialectical Behavior Therapy (DBT) - Distress Tolerance Skills.</h2>
+        <h2 className="text-3xl md:text-4xl font-serif text-base font-bold text-center italic mb-8">Internal Family Systems (IFS) - A transformative approach to healing.</h2>
           
         <div ref={containerRef} className="w-full pb-[100px]">
           {/* Jotform embed will be injected here */}

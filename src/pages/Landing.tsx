@@ -769,7 +769,7 @@ export default function Landing() {
       <section id="free-chapter" className="py-20 bg-white px-4 md:px-6">
         <div className="max-w-2xl mx-auto text-center border-t border-stone-200 pt-20">
           <h2 className="text-2xl font-serif font-bold text-stone-900 mb-4">Not ready to buy? Get our free chapter and learn about:</h2>
-          <h2 className="text-3xl font-serif font-bold italic text-stone-900 mb-8">Dialectical Behavior Therapy (DBT) - Distress Tolerance Skills.</h2>
+          <h2 className="text-3xl font-serif font-bold italic text-stone-900 mb-8">Internal Family Systems (IFS) - A transformative approach to healing.</h2>
           
           <div className="mb-12">
             <Link to="/free-chapter-form" className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-colors shadow-lg">
