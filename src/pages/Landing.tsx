@@ -208,7 +208,7 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
     <section className="relative w-full h-[100dvh] min-h-[750px] md:min-h-[800px] flex overflow-hidden bg-neutral-50 py-12 md:py-0">
       {/* Mobile Background Image (Visible only on mobile) */}
       <div className="absolute inset-0 z-0 md:hidden">
-        <img src="/authorBook.png" alt="Tiffani Sainz" className="w-full h-full object-cover object-top" />
+        <img src="/authorBook.jpg" alt="Tiffani Sainz" className="w-full h-full object-cover object-top" />
         {/* Soft overlay to make text readable but keep author visible */}
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -218,7 +218,7 @@ function HeroVersionB({ timerVersion }: { timerVersion: 'a' | 'b' }) {
 
       {/* Desktop Background (Right Side 45%) */}
       <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[45%] z-0">
-        <img src="/authorBook.png" alt="Tiffani Sainz" className="w-full h-full object-cover object-top" />
+        <img src="/authorBook.jpg" alt="Tiffani Sainz" className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-50 via-neutral-50/20 to-transparent"></div>
       </div>
 
