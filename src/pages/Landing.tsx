@@ -71,8 +71,8 @@ function CountdownTimer({ theme = 'default', variant = 'a' }: { theme?: 'default
   const [timeLeft, setTimeLeft] = useState({ days: 60, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    // Current date is June 25, 2026. Target date 60 days away is Aug 24, 2026.
-    const targetDate = new Date('2026-08-24T00:00:00Z').getTime();
+    // Current date is July 6, 2026. Target date 60 days away is Sept 4, 2026.
+    const targetDate = new Date('2026-09-04T23:59:59Z').getTime();
     
     const interval = setInterval(() => {
       const now = new Date().getTime();
