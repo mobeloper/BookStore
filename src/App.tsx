@@ -6,6 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { BookOpen, Instagram, Linkedin, Globe, LineChart, PenTool } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Landing from './pages/Landing';
 import Blog from './pages/Blog';
 import Dashboard from './pages/Dashboard';
@@ -219,6 +220,7 @@ export default function App() {
           </Layout>
         } />
       </Routes>
+      <SpeedInsights />
     </Router>
   );
 }
